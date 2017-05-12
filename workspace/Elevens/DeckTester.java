@@ -30,5 +30,10 @@ public class DeckTester {
 		 String[] twentyOneRanks = {"two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "jack", "queen", "king", "ace"};
 		 String[] twentyOneSuits = {"hearts", "spades", "clubs", "diamonds"};
 		 int[] twentyOneValues = {2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11};
+		 Deck fiftyTwoCards = new Deck(twentyOneRanks, twentyOneSuits, twentyOneValues);
+		 
+		 System.out.println(fiftyTwoCards);
+		 fiftyTwoCards.shuffle();
+		 System.out.print(fiftyTwoCards);
 	}
 }

@@ -110,4 +110,35 @@ public class Shuffler {
 			values[k] = temp;
 		}
 	}
+	
+	public static boolean arePermutations(int[] a1, int[] a2)
+	{
+		boolean isPermutation = true;
+		
+		int[] array1 = doInsertionSort(a1);
+		int[] array2 = doInsertionSort(a2);
+		for(int i = 0; i < array1.length; i++)
+		{
+			if(array1[i] != array2[i])
+			{
+				isPermutation = false;
+			}
+		}
+		return isPermutation;
+	}
+	
+	public static int[] doInsertionSort(int[] input){
+        
+        int temp;
+        for (int i = 1; i < input.length; i++) {
+            for(int j = i ; j > 0 ; j--){
+                if(input[j] < input[j-1]){
+                    temp = input[j];
+                    input[j] = input[j-1];
+                    input[j-1] = temp;
+                }
+            }
+        }
+        return input;
+    }
 }
